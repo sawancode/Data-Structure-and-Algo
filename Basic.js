@@ -105,3 +105,63 @@ Space Complexity: O(1)
 
 */
 
+
+/*
+
+❓ Question
+
+Write a JavaScript program to check whether a given number is a Palindrome or not.
+
+✅ Answer
+🔹 What is a Palindrome Number?
+
+A Palindrome number is a number that remains the same when its digits are reversed.
+
+📌 Examples:
+
+121 → Palindrome ✅
+
+1111 → Palindrome ✅
+
+1112 → Not a Palindrome ❌
+
+🧠 Logic Used
+
+Store the original number in a variable.
+
+Reverse the number using a while loop.
+
+Compare the reversed number with the original number.
+
+If both are equal → Palindrome, otherwise → Not Palindrome.
+
+
+
+function checkPalindrome(n) {
+    let rev = 0;
+    let originalNumber = n;
+
+    while (n > 0) {
+        let lastDigit = n % 10;
+        rev = (rev * 10) + lastDigit;
+        n = Math.floor(n / 10);
+    }
+
+    if (originalNumber === rev) {
+        console.log("Palindrome");
+    } else {
+        console.log("Not Palindrome");
+    }
+}
+
+function main() {
+    let N = 1112;
+    console.log("Number:", N);
+    checkPalindrome(N);
+}
+
+main();
+
+*/
+
+
