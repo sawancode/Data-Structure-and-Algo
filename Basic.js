@@ -164,4 +164,52 @@ main();
 
 */
 
+/*
+
+📌 Question
+
+Write a program to check whether a given number is an Armstrong number or not.
+
+🔍 What is an Armstrong Number?
+
+An Armstrong number is a number that is equal to the sum of the cubes of its digits.
+
+✅ Example
+
+Input: 153
+Calculation:
+1³ + 5³ + 3³
+= 1 + 125 + 27
+= 153
+
+Since the sum is equal to the original number, 153 is an Armstrong number.
+
+
+
+function checkArmstrong(n) {
+    let rev = 0;
+    let originalNumber = n;
+
+    while (n > 0) {
+        let lastDigit = n % 10;
+        rev = (lastDigit * lastDigit * lastDigit) + rev;
+        n = Math.floor(n / 10);
+    }
+
+    if (originalNumber === rev) {
+        console.log("Armstrong Number");
+    } else {
+        console.log("Not Armstrong Number");
+    }
+}
+
+function main() {
+    let N = 153;
+    console.log("N:", N);
+    checkArmstrong(N);
+}
+
+main();
+
+*/
 
